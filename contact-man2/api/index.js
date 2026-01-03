@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import {connectDB} from '../lib/db.lib.js';
-import usersRoute from '../routes/users.route.js'
+import {connectDB} from '../src/lib/db.lib.js';
+import usersRoute from '../src/routes/users.route.js'
 import cors from 'cors'
 
 const app = express();
