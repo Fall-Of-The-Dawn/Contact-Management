@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className='navbar-center hidden lg:flex'>
           <Link to="/" className="btn btn-ghost normal-case text-xl">Home </Link>
           <Link to="/findContacts" className="btn btn-ghost normal-case text-xl">Find Contacts</Link>
-          <Link to="/contact" className="btn btn-ghost normal-case text-xl">Contact</Link>
+          <Link to="/contact" className="btn btn-ghost normal-case text-xl">Add Contact</Link>
         </div>
         <div className="navbar-end">
        
