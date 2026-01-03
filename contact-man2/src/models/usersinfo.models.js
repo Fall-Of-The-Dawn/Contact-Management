@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     email: {
         type: String,
@@ -17,7 +18,6 @@ const userSchema = new mongoose.Schema({
     message : {
         type:String,
         default : ""
-    },
-
-});
-export default mongoose.model('users', userSchema);
+    }},
+    {timestamps: true});
+export default  mongoose.model('users', userSchema);

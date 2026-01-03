@@ -1,9 +1,20 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import {connectDB} from './lib/db.lib.js';
-dotenv.config();
+import usersRoute from './routes/users.route.js'
+import cors from 'cors'
 
 const app = express();
+
+app.use(cors())
+app.use(express.json())
+
+dotenv.config();
+
+app.use('/api/users', usersRoute)
+
+
+
 
 const Port = process.env.PORT || 3000;
 try{
@@ -11,5 +22,4 @@ try{
 }catch(err){
     console.log(err.message)
 }
-
 app.listen(Port, () => console.log(`Server running on port ${Port}`)); 
