@@ -9,7 +9,12 @@ const app = express();
 
 dotenv.config();
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: "https://contact-management-app-flax.vercel.app/",
+        credentials: true
+    }
+))
 app.use(express.json())
 
 app.use('/api/users', usersRoute)
