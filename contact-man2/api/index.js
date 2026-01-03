@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(cors(
     {
-        origin: "https://contact-management-app-flax.vercel.app/",
+        origin: "https://contact-management-app-flax.vercel.app/", 
         credentials: true
     }
 ))
