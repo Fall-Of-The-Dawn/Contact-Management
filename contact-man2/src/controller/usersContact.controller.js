@@ -24,8 +24,7 @@ const addContact = async(req, res)=>{
         const response = await users.create({name: name, email: email, phone: phone, message: message}); 
         res.status(201).json(response)
     } catch (error) {
-        console.log(error);
-        res.status(500).json({message: error.message})
+        return res.status(500).json({message: error.message})
     }
 }
 
