@@ -7,7 +7,7 @@ const findContacts = async(req, res)=>{
         res.status(200).json(findContact) 
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "Error at finding contacts"})
+        res.status(500).json({message: error.message})
     }
 }
 
