@@ -25,7 +25,7 @@ const addContact = async(req, res)=>{
         res.status(201).json(response)
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "Error at creating contact"})
+        res.status(500).json({message: error.message})
     }
 }
 
